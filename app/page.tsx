@@ -83,9 +83,10 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#09090b] text-[#f4f4f5]">
-      {/* HEADER */}
+
+      {/* ================= HEADER ================= */}
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#09090b]/95 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-5">
+        <div className="mx-auto flex h-[72px] max-w-6xl items-center justify-between px-5">
           <div className="text-xl font-bold tracking-tight">
             <span className="text-[#d4af37]">✦</span>{" "}
             volte ao foco.
@@ -93,74 +94,83 @@ export default function Home() {
 
           <a
             href="#oferta"
-            className="hidden rounded-full bg-[#d4af37] px-5 py-2.5 text-sm font-bold text-black transition hover:bg-[#e5c45b] sm:block"
+            className="rounded-full bg-[#d4af37] px-5 py-2.5 text-sm font-bold text-black transition hover:bg-[#e5c45b]"
           >
             Quero começar
           </a>
         </div>
       </header>
 
-      {/* HERO */}
-      <section className="relative overflow-hidden border-b border-white/10">
-        <div className="absolute left-1/2 top-0 h-[550px] w-[550px] -translate-x-1/2 rounded-full bg-[#d4af37]/10 blur-[140px]" />
+      {/* ================= HERO ================= */}
+      <section className="relative min-h-[calc(100vh-72px)] overflow-hidden border-b border-white/10">
+        
+        <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d4af37]/10 blur-[140px]" />
 
-        <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 py-20 md:grid-cols-2 md:py-28">
-          <div>
-            <div className="mb-6 inline-flex rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 px-4 py-2 text-sm font-medium text-[#d4af37]">
+        <div className="relative mx-auto grid min-h-[calc(100vh-72px)] max-w-6xl items-center gap-8 px-5 py-8 lg:grid-cols-2 lg:gap-12">
+
+          {/* TEXTO */}
+          <div className="flex flex-col justify-center">
+
+            <div className="mb-4 inline-flex w-fit rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 px-4 py-2 text-sm font-medium text-[#d4af37]">
               ✦ Oferta especial: de R$ 24,90 por R$ 19,90
             </div>
 
-            <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl md:text-6xl">
+            <h1 className="max-w-2xl text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-[54px]">
               Pare de se perder{" "}
               <span className="text-[#d4af37]">
                 no meio de tantas distrações.
               </span>
             </h1>
 
-            <p className="mt-6 max-w-xl text-lg leading-8 text-[#a1a1aa]">
+            <p className="mt-5 max-w-xl text-base leading-7 text-[#a1a1aa] sm:text-lg">
               Um guia prático para organizar sua rotina, recuperar sua
               atenção, definir prioridades e voltar a agir em direção
               aos seus objetivos.
             </p>
 
-            <div className="mt-9">
+            <div className="mt-6">
               <a
-                href="#oferta"
+                href={checkoutUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block rounded-full bg-[#d4af37] px-7 py-4 text-center font-extrabold text-black shadow-lg shadow-[#d4af37]/10 transition hover:-translate-y-1 hover:bg-[#e5c45b]"
               >
                 QUERO VOLTAR AO FOCO →
               </a>
             </div>
 
-            <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-[#77777f]">
+            <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-xs text-[#77777f] sm:text-sm">
               <span>✓ Acesso digital</span>
               <span>✓ Conteúdo prático</span>
               <span>✓ De R$ 24,90 por R$ 19,90</span>
             </div>
           </div>
 
-          {/* MOCKUP */}
-          <div className="flex justify-center">
-            <div className="relative w-full max-w-md">
-              <div className="absolute inset-0 translate-x-4 translate-y-4 rounded-[2rem] bg-[#d4af37]/20 blur-sm" />
+          {/* CAPA / MOCKUP */}
+          <div className="flex items-center justify-center">
+            <div className="relative w-full max-w-[370px]">
 
-              <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#151518] p-7 shadow-2xl">
-                <div className="mb-7 text-center">
-                  <div className="mb-3 text-5xl text-[#d4af37]">
+              <div className="absolute inset-0 translate-x-3 translate-y-3 rounded-[2rem] bg-[#d4af37]/20 blur-sm" />
+
+              <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#151518] p-6 shadow-2xl">
+
+                <div className="text-center">
+
+                  <div className="text-4xl text-[#d4af37]">
                     ✦
                   </div>
 
-                  <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#d4af37]">
-                    Guia prático
+                  <p className="mt-2 text-xs font-semibold uppercase tracking-[0.25em] text-[#d4af37]">
+                    GUIA PRÁTICO
                   </p>
 
-                  <h2 className="mt-4 text-4xl font-extrabold leading-tight">
+                  <h2 className="mt-3 text-4xl font-extrabold leading-tight">
                     volte ao
                     <br />
                     foco.
                   </h2>
 
-                  <p className="mt-4 text-sm leading-6 text-[#9999a1]">
+                  <p className="mt-3 text-sm leading-6 text-[#9999a1]">
                     Organize sua mente.
                     <br />
                     Organize sua rotina.
@@ -169,35 +179,47 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="space-y-3">
-                  {[
-                    "Minhas prioridades",
-                    "Minha rotina",
-                    "Meus hábitos",
-                    "Meus objetivos",
-                    "Meu plano de ação",
-                  ].map((item, index) => (
-                    <div
-                      key={item}
-                      className="flex items-center gap-3 rounded-2xl border border-white/5 bg-[#1f1f23] px-4 py-3"
-                    >
-                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#d4af37]/15 text-sm font-bold text-[#d4af37]">
-                        {index + 1}
-                      </div>
+                <div className="mt-5 space-y-2">
 
-                      <span className="font-medium text-[#e4e4e7]">
-                        {item}
-                      </span>
+                  <div className="flex items-center gap-3 rounded-xl border border-white/5 bg-[#1f1f23] px-3 py-2.5">
+                    <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#d4af37]/15 text-xs font-bold text-[#d4af37]">
+                      1
                     </div>
-                  ))}
+
+                    <span className="text-sm font-medium text-[#e4e4e7]">
+                      Minhas prioridades
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-3 rounded-xl border border-white/5 bg-[#1f1f23] px-3 py-2.5">
+                    <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#d4af37]/15 text-xs font-bold text-[#d4af37]">
+                      2
+                    </div>
+
+                    <span className="text-sm font-medium text-[#e4e4e7]">
+                      Minha rotina
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-3 rounded-xl border border-white/5 bg-[#1f1f23] px-3 py-2.5">
+                    <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#d4af37]/15 text-xs font-bold text-[#d4af37]">
+                      3
+                    </div>
+
+                    <span className="text-sm font-medium text-[#e4e4e7]">
+                      Meus objetivos
+                    </span>
+                  </div>
+
                 </div>
 
-                <div className="mt-6 rounded-2xl border border-[#d4af37]/20 bg-[#d4af37]/10 p-4 text-center">
-                  <p className="text-xs uppercase tracking-wider text-[#d4af37]">
+                <div className="mt-4 rounded-xl border border-[#d4af37]/20 bg-[#d4af37]/10 p-3 text-center">
+
+                  <p className="text-[10px] uppercase tracking-wider text-[#d4af37]">
                     Oferta especial
                   </p>
 
-                  <p className="mt-1 text-sm text-[#9999a1]">
+                  <p className="mt-1 text-xs text-[#9999a1]">
                     De{" "}
                     <span className="line-through">
                       R$ 24,90
@@ -205,19 +227,23 @@ export default function Home() {
                     por
                   </p>
 
-                  <p className="mt-1 text-2xl font-extrabold text-[#d4af37]">
+                  <p className="mt-0.5 text-2xl font-extrabold text-[#d4af37]">
                     R$ 19,90
                   </p>
+
                 </div>
+
               </div>
             </div>
           </div>
+
         </div>
       </section>
 
-      {/* PROBLEM */}
+      {/* ================= PROBLEMA ================= */}
       <section className="bg-[#111113] py-20">
         <div className="mx-auto max-w-4xl px-5 text-center">
+
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#d4af37]">
             Talvez isso esteja acontecendo
           </p>
@@ -233,6 +259,7 @@ export default function Home() {
           </p>
 
           <div className="mt-10 grid gap-4 text-left sm:grid-cols-2">
+
             {[
               "Você começa várias coisas e termina poucas",
               "Passa muito tempo no celular sem perceber",
@@ -254,13 +281,15 @@ export default function Home() {
                 </span>
               </div>
             ))}
+
           </div>
         </div>
       </section>
 
-      {/* SOLUTION */}
+      {/* ================= SOLUÇÃO ================= */}
       <section className="bg-[#09090b] py-20">
         <div className="mx-auto max-w-5xl px-5 text-center">
+
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#d4af37]">
             Conheça o volte ao foco.
           </p>
@@ -275,11 +304,13 @@ export default function Home() {
           </p>
 
           <div className="mt-12 grid gap-5 md:grid-cols-3">
+
             {benefits.map((benefit) => (
               <div
                 key={benefit.title}
                 className="rounded-3xl border border-white/10 bg-[#151518] p-6 text-left shadow-lg transition hover:-translate-y-1 hover:border-[#d4af37]/30"
               >
+
                 <div className="mb-4 text-3xl">
                   {benefit.icon}
                 </div>
@@ -291,16 +322,20 @@ export default function Home() {
                 <p className="mt-2 leading-7 text-[#92929a]">
                   {benefit.text}
                 </p>
+
               </div>
             ))}
+
           </div>
         </div>
       </section>
 
-      {/* INCLUDED */}
+      {/* ================= INCLUÍDO ================= */}
       <section className="border-y border-white/10 bg-[#111113] py-20">
         <div className="mx-auto max-w-5xl px-5">
+
           <div className="text-center">
+
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#d4af37]">
               O que você vai encontrar
             </p>
@@ -308,14 +343,17 @@ export default function Home() {
             <h2 className="mt-3 text-3xl font-extrabold sm:text-4xl">
               Um guia para voltar a assumir o controle da sua rotina
             </h2>
+
           </div>
 
           <div className="mx-auto mt-10 grid max-w-3xl gap-3 sm:grid-cols-2">
+
             {included.map((item) => (
               <div
                 key={item}
                 className="flex items-center gap-3 rounded-2xl border border-white/10 bg-[#19191d] p-4"
               >
+
                 <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#d4af37]/15 text-sm font-bold text-[#d4af37]">
                   ✓
                 </span>
@@ -323,15 +361,18 @@ export default function Home() {
                 <span className="font-medium text-[#d0d0d5]">
                   {item}
                 </span>
+
               </div>
             ))}
+
           </div>
         </div>
       </section>
 
-      {/* HOW IT WORKS */}
+      {/* ================= COMO FUNCIONA ================= */}
       <section className="bg-[#09090b] py-20">
         <div className="mx-auto max-w-5xl px-5 text-center">
+
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#d4af37]">
             Comece hoje
           </p>
@@ -341,6 +382,7 @@ export default function Home() {
           </h2>
 
           <div className="mt-12 grid gap-8 md:grid-cols-3">
+
             {[
               {
                 number: "01",
@@ -359,6 +401,7 @@ export default function Home() {
               },
             ].map((step) => (
               <div key={step.number}>
+
                 <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#d4af37] text-lg font-extrabold text-black">
                   {step.number}
                 </div>
@@ -370,17 +413,22 @@ export default function Home() {
                 <p className="mt-3 leading-7 text-[#92929a]">
                   {step.text}
                 </p>
+
               </div>
             ))}
+
           </div>
         </div>
       </section>
 
-      {/* BONUS */}
+      {/* ================= BÔNUS ================= */}
       <section className="bg-[#111113] py-20">
         <div className="mx-auto max-w-4xl px-5">
+
           <div className="rounded-[2rem] border border-[#d4af37]/20 bg-[#151518] p-8 shadow-xl md:p-12">
+
             <div className="text-center">
+
               <div className="text-4xl">
                 🎁
               </div>
@@ -397,9 +445,11 @@ export default function Home() {
                 Páginas práticas para organizar seu dia, sua semana,
                 seus hábitos, seus objetivos e suas próximas ações.
               </p>
+
             </div>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
+
               {[
                 "Planejamento diário",
                 "Planejamento semanal",
@@ -418,27 +468,34 @@ export default function Home() {
                   {item}
                 </div>
               ))}
+
             </div>
           </div>
         </div>
       </section>
 
-      {/* OFFER */}
+      {/* ================= OFERTA ================= */}
       <section
         id="oferta"
         className="relative overflow-hidden bg-[#09090b] py-20 md:py-28"
       >
+
         <div className="absolute left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d4af37]/10 blur-[120px]" />
 
         <div className="relative mx-auto max-w-xl px-5">
+
           <div className="overflow-hidden rounded-[2rem] border border-[#d4af37]/30 bg-[#151518] shadow-2xl">
+
             <div className="bg-[#d4af37] px-6 py-5 text-center text-black">
+
               <p className="text-sm font-extrabold uppercase tracking-[0.15em]">
                 🔥 Oferta especial
               </p>
+
             </div>
 
             <div className="p-8 text-center md:p-10">
+
               <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 text-5xl text-[#d4af37]">
                 ✦
               </div>
@@ -452,6 +509,7 @@ export default function Home() {
               </p>
 
               <div className="mt-8">
+
                 <p className="text-sm text-[#77777f]">
                   De{" "}
                   <span className="line-through">
@@ -470,6 +528,7 @@ export default function Home() {
                 <p className="mt-2 text-sm text-[#77777f]">
                   Oferta especial
                 </p>
+
               </div>
 
               <a
@@ -484,15 +543,18 @@ export default function Home() {
               <p className="mt-4 text-xs text-[#77777f]">
                 Pagamento processado pela plataforma de checkout.
               </p>
+
             </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* ================= FAQ ================= */}
       <section className="border-t border-white/10 bg-[#111113] py-20">
         <div className="mx-auto max-w-3xl px-5">
+
           <div className="text-center">
+
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#d4af37]">
               Dúvidas
             </p>
@@ -500,10 +562,13 @@ export default function Home() {
             <h2 className="mt-3 text-3xl font-extrabold sm:text-4xl">
               Perguntas frequentes
             </h2>
+
           </div>
 
           <div className="mt-10 space-y-3">
+
             {faq.map((item, index) => {
+
               const isOpen = openFaq === index;
 
               return (
@@ -511,6 +576,7 @@ export default function Home() {
                   key={item.question}
                   className="overflow-hidden rounded-2xl border border-white/10 bg-[#19191d]"
                 >
+
                   <button
                     type="button"
                     onClick={() =>
@@ -518,11 +584,15 @@ export default function Home() {
                     }
                     className="flex w-full items-center justify-between gap-4 p-5 text-left font-bold"
                   >
-                    <span>{item.question}</span>
+
+                    <span>
+                      {item.question}
+                    </span>
 
                     <span className="text-xl text-[#d4af37]">
                       {isOpen ? "−" : "+"}
                     </span>
+
                   </button>
 
                   {isOpen && (
@@ -530,16 +600,19 @@ export default function Home() {
                       {item.answer}
                     </div>
                   )}
+
                 </div>
               );
             })}
+
           </div>
         </div>
       </section>
 
-      {/* FINAL CTA */}
+      {/* ================= CTA FINAL ================= */}
       <section className="border-t border-white/10 bg-[#09090b] py-20">
         <div className="mx-auto max-w-3xl px-5 text-center">
+
           <div className="text-4xl text-[#d4af37]">
             ✦
           </div>
@@ -574,12 +647,14 @@ export default function Home() {
               R$ 19,90
             </span>
           </p>
+
         </div>
       </section>
 
-      {/* FOOTER */}
+      {/* ================= FOOTER ================= */}
       <footer className="border-t border-white/10 bg-[#070708] py-8">
         <div className="mx-auto max-w-6xl px-5 text-center text-sm text-[#66666d]">
+
           <p className="font-semibold text-[#bdbdc3]">
             <span className="text-[#d4af37]">✦</span>{" "}
             volte ao foco.
@@ -593,8 +668,10 @@ export default function Home() {
             © {new Date().getFullYear()} volte ao foco.
             Todos os direitos reservados.
           </p>
+
         </div>
       </footer>
+
     </main>
   );
 }
