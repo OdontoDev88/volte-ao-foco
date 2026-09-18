@@ -4,46 +4,46 @@ import { useState } from "react";
 
 const benefits = [
   {
-    icon: "📅",
-    title: "Organize sua rotina",
-    text: "Aprenda a estruturar seus dias de forma simples e realista.",
-  },
-  {
     icon: "🎯",
     title: "Defina suas prioridades",
-    text: "Descubra o que realmente merece sua atenção.",
+    text: "Entenda o que realmente importa e pare de gastar energia com tarefas que não levam você para onde quer.",
+  },
+  {
+    icon: "🧠",
+    title: "Recupere seu foco",
+    text: "Aprenda formas simples de reduzir distrações e direcionar sua atenção para o que precisa ser feito.",
+  },
+  {
+    icon: "📅",
+    title: "Organize sua rotina",
+    text: "Estruture seus dias de uma maneira prática, realista e possível de manter.",
   },
   {
     icon: "✅",
-    title: "Tenha mais controle",
-    text: "Acompanhe tarefas, hábitos e objetivos de forma prática.",
+    title: "Saia da procrastinação",
+    text: "Transforme aquilo que você fica adiando em pequenas ações que podem ser executadas.",
   },
   {
-    icon: "💰",
-    title: "Organize sua vida financeira",
-    text: "Tenha uma visão mais clara dos seus gastos e do seu dinheiro.",
+    icon: "🔥",
+    title: "Crie consistência",
+    text: "Use planejamento e acompanhamento para manter seus objetivos presentes no dia a dia.",
   },
   {
-    icon: "🧹",
-    title: "Organize seu ambiente",
-    text: "Crie uma rotina para manter seus espaços mais organizados.",
-  },
-  {
-    icon: "📱",
-    title: "Organize sua vida digital",
-    text: "Coloque ordem nos arquivos, aplicativos e informações.",
+    icon: "🚀",
+    title: "Avance nos seus objetivos",
+    text: "Tenha mais clareza sobre onde quer chegar e quais passos precisa dar para avançar.",
   },
 ];
 
 const included = [
-  "Guia completo de organização pessoal",
+  "Guia prático para recuperar o foco",
   "Método para definir prioridades",
-  "Planejamento de rotina",
+  "Organização da rotina",
+  "Planejamento diário",
   "Planejamento semanal",
-  "Organização de hábitos",
-  "Organização financeira básica",
-  "Organização do ambiente",
-  "Organização da vida digital",
+  "Controle de hábitos",
+  "Estratégias contra a procrastinação",
+  "Organização dos objetivos",
   "Planejamento de 30 dias",
   "Páginas práticas para preencher",
 ];
@@ -55,19 +55,19 @@ const faq = [
       "Após a confirmação do pagamento, você receberá as instruções de acesso ao material digital.",
   },
   {
-    question: "Preciso imprimir o planner?",
+    question: "O material é digital?",
     answer:
-      "Não. O material pode ser utilizado digitalmente. Se preferir, você também pode imprimir as páginas.",
+      "Sim. O produto é um material digital que você pode acessar pelo seu dispositivo.",
   },
   {
-    question: "É indicado para quem é desorganizado?",
+    question: "Preciso ter experiência com organização?",
     answer:
-      "Sim. O conteúdo foi pensado para quem quer começar a organizar a rotina de maneira simples e prática.",
+      "Não. O conteúdo foi pensado para ser simples e prático, inclusive para quem está começando.",
   },
   {
     question: "Preciso dedicar muito tempo por dia?",
     answer:
-      "Não. A proposta é ajudar você a criar uma organização que caiba na sua rotina.",
+      "Não. A proposta é ajudar você a organizar pequenas ações dentro da sua própria rotina.",
   },
   {
     question: "O pagamento é seguro?",
@@ -80,15 +80,15 @@ export default function Home() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
-    <main className="min-h-screen bg-[#0b0b0d] text-[#f5f5f5]">
+    <main className="min-h-screen bg-[#09090b] text-[#f4f4f5]">
 
       {/* HEADER */}
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0b0b0d]/95 backdrop-blur">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-[#09090b]/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-5">
 
           <div className="text-xl font-bold tracking-tight">
             <span className="text-[#d4af37]">✦</span>{" "}
-            Minha Vida Organizada
+            volte ao foco.
           </div>
 
           <a
@@ -104,27 +104,27 @@ export default function Home() {
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-white/10">
 
-        <div className="absolute left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-[#d4af37]/10 blur-[120px]" />
+        <div className="absolute left-1/2 top-0 h-[550px] w-[550px] -translate-x-1/2 rounded-full bg-[#d4af37]/10 blur-[140px]" />
 
         <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 py-20 md:grid-cols-2 md:py-28">
 
           <div>
 
             <div className="mb-6 inline-flex rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 px-4 py-2 text-sm font-medium text-[#d4af37]">
-              ✦ Um passo de cada vez
+              ✦ Pare. Respire. Volte ao foco.
             </div>
 
             <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl md:text-6xl">
-              Organize sua vida{" "}
+              Pare de se perder{" "}
               <span className="text-[#d4af37]">
-                sem complicar.
+                no meio de tantas distrações.
               </span>
             </h1>
 
-            <p className="mt-6 max-w-xl text-lg leading-8 text-[#a6a6ab]">
-              Um guia prático para colocar sua rotina, suas tarefas,
-              seus hábitos e seus objetivos em ordem — de uma maneira
-              simples e possível de manter.
+            <p className="mt-6 max-w-xl text-lg leading-8 text-[#a1a1aa]">
+              Um guia prático para organizar sua rotina, recuperar sua
+              atenção, definir prioridades e voltar a agir em direção
+              aos seus objetivos.
             </p>
 
             <div className="mt-9">
@@ -132,11 +132,11 @@ export default function Home() {
                 href="#oferta"
                 className="inline-block rounded-full bg-[#d4af37] px-7 py-4 text-center font-extrabold text-black shadow-lg shadow-[#d4af37]/10 transition hover:-translate-y-1 hover:bg-[#e5c45b]"
               >
-                QUERO ORGANIZAR MINHA VIDA →
+                QUERO VOLTAR AO FOCO →
               </a>
             </div>
 
-            <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-[#85858b]">
+            <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-[#77777f]">
               <span>✓ Acesso digital</span>
               <span>✓ Conteúdo prático</span>
               <span>✓ Apenas R$ 19,90</span>
@@ -155,22 +155,26 @@ export default function Home() {
 
                 <div className="mb-7 text-center">
 
-                  <div className="mb-3 text-4xl text-[#d4af37]">
+                  <div className="mb-3 text-5xl text-[#d4af37]">
                     ✦
                   </div>
 
-                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#d4af37]">
+                  <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#d4af37]">
                     Guia prático
                   </p>
 
-                  <h2 className="mt-3 text-3xl font-extrabold leading-tight">
-                    Minha Vida
+                  <h2 className="mt-4 text-4xl font-extrabold leading-tight">
+                    volte ao
                     <br />
-                    Organizada
+                    foco.
                   </h2>
 
-                  <p className="mt-3 text-sm text-[#99999f]">
-                    Organize sua rotina, suas tarefas e seus objetivos.
+                  <p className="mt-4 text-sm leading-6 text-[#9999a1]">
+                    Organize sua mente.
+                    <br />
+                    Organize sua rotina.
+                    <br />
+                    Volte a agir.
                   </p>
 
                 </div>
@@ -178,23 +182,23 @@ export default function Home() {
                 <div className="space-y-3">
 
                   {[
-                    "Minha rotina",
                     "Minhas prioridades",
+                    "Minha rotina",
                     "Meus hábitos",
                     "Meus objetivos",
-                    "Minha organização",
+                    "Meu plano de ação",
                   ].map((item, index) => (
 
                     <div
                       key={item}
-                      className="flex items-center gap-3 rounded-2xl border border-white/5 bg-[#1e1e22] px-4 py-3"
+                      className="flex items-center gap-3 rounded-2xl border border-white/5 bg-[#1f1f23] px-4 py-3"
                     >
 
                       <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#d4af37]/15 text-sm font-bold text-[#d4af37]">
                         {index + 1}
                       </div>
 
-                      <span className="font-medium text-[#e7e7e9]">
+                      <span className="font-medium text-[#e4e4e7]">
                         {item}
                       </span>
 
@@ -214,46 +218,48 @@ export default function Home() {
       </section>
 
       {/* PROBLEM */}
-      <section className="bg-[#111114] py-20">
+      <section className="bg-[#111113] py-20">
 
         <div className="mx-auto max-w-4xl px-5 text-center">
 
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#d4af37]">
-            Você se identifica?
+            Talvez isso esteja acontecendo
           </p>
 
           <h2 className="mt-3 text-3xl font-extrabold sm:text-4xl">
-            Parece que tem coisa demais acontecendo ao mesmo tempo?
+            Você sabe o que precisa fazer, mas acaba fazendo qualquer outra coisa?
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#9c9ca2]">
-            Tarefas acumuladas, objetivos esquecidos, rotina desorganizada
-            e a sensação de que o dia terminou antes de você conseguir
-            fazer tudo.
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#9999a1]">
+            Notificações, redes sociais, tarefas acumuladas e falta de
+            planejamento podem fazer você terminar o dia com a sensação
+            de que não saiu do lugar.
           </p>
 
           <div className="mt-10 grid gap-4 text-left sm:grid-cols-2">
 
             {[
-              "Você começa o dia sem saber por onde começar",
-              "Sua lista de tarefas parece nunca terminar",
-              "Você deixa objetivos importantes para depois",
-              "Sua rotina muda constantemente",
-              "Você quer criar hábitos, mas acaba desistindo",
-              "Sente que precisa colocar a vida em ordem",
+              "Você começa várias coisas e termina poucas",
+              "Passa muito tempo no celular sem perceber",
+              "Adia tarefas importantes para depois",
+              "Tem dificuldade para manter uma rotina",
+              "Se sente perdido com tantas coisas para fazer",
+              "Sabe onde quer chegar, mas não sabe por onde começar",
             ].map((item) => (
 
               <div
                 key={item}
-                className="rounded-2xl border border-white/10 bg-[#18181c] p-5"
+                className="rounded-2xl border border-white/10 bg-[#19191d] p-5"
               >
+
                 <span className="mr-2 text-[#d4af37]">
                   ✓
                 </span>
 
-                <span className="text-[#c8c8cc]">
+                <span className="text-[#c7c7cc]">
                   {item}
                 </span>
+
               </div>
 
             ))}
@@ -265,25 +271,21 @@ export default function Home() {
       </section>
 
       {/* SOLUTION */}
-      <section className="bg-[#0b0b0d] py-20">
+      <section className="bg-[#09090b] py-20">
 
         <div className="mx-auto max-w-5xl px-5 text-center">
 
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#d4af37]">
-            Conheça o guia
+            Conheça o volte ao foco.
           </p>
 
           <h2 className="mt-3 text-3xl font-extrabold sm:text-4xl">
-            Uma forma simples de começar a colocar sua vida em ordem
+            Menos distração. Mais clareza. Mais ação.
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#99999f]">
-            O{" "}
-            <strong className="text-white">
-              Minha Vida Organizada
-            </strong>{" "}
-            reúne orientações, exercícios e páginas práticas para você
-            transformar organização em uma rotina possível.
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#9999a1]">
+            Um material criado para ajudar você a organizar suas
+            prioridades e transformar intenção em ação.
           </p>
 
           <div className="mt-12 grid gap-5 md:grid-cols-3">
@@ -303,7 +305,7 @@ export default function Home() {
                   {benefit.title}
                 </h3>
 
-                <p className="mt-2 leading-7 text-[#929298]">
+                <p className="mt-2 leading-7 text-[#92929a]">
                   {benefit.text}
                 </p>
 
@@ -318,7 +320,7 @@ export default function Home() {
       </section>
 
       {/* INCLUDED */}
-      <section className="border-y border-white/10 bg-[#111114] py-20">
+      <section className="border-y border-white/10 bg-[#111113] py-20">
 
         <div className="mx-auto max-w-5xl px-5">
 
@@ -329,7 +331,7 @@ export default function Home() {
             </p>
 
             <h2 className="mt-3 text-3xl font-extrabold sm:text-4xl">
-              Tudo em um único material
+              Um guia para voltar a assumir o controle da sua rotina
             </h2>
 
           </div>
@@ -340,14 +342,14 @@ export default function Home() {
 
               <div
                 key={item}
-                className="flex items-center gap-3 rounded-2xl border border-white/10 bg-[#18181c] p-4"
+                className="flex items-center gap-3 rounded-2xl border border-white/10 bg-[#19191d] p-4"
               >
 
                 <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#d4af37]/15 text-sm font-bold text-[#d4af37]">
                   ✓
                 </span>
 
-                <span className="font-medium text-[#d0d0d4]">
+                <span className="font-medium text-[#d0d0d5]">
                   {item}
                 </span>
 
@@ -362,7 +364,7 @@ export default function Home() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="bg-[#0b0b0d] py-20">
+      <section className="bg-[#09090b] py-20">
 
         <div className="mx-auto max-w-5xl px-5 text-center">
 
@@ -371,7 +373,7 @@ export default function Home() {
           </p>
 
           <h2 className="mt-3 text-3xl font-extrabold sm:text-4xl">
-            Três passos para começar
+            Três passos simples
           </h2>
 
           <div className="mt-12 grid gap-8 md:grid-cols-3">
@@ -384,13 +386,13 @@ export default function Home() {
               },
               {
                 number: "02",
-                title: "Comece pelo básico",
-                text: "Siga as orientações e escolha o que faz sentido para sua rotina.",
+                title: "Organize suas prioridades",
+                text: "Use as orientações para entender o que merece sua atenção.",
               },
               {
                 number: "03",
-                title: "Coloque em prática",
-                text: "Use os planejamentos e exercícios para organizar seu dia a dia.",
+                title: "Volte a agir",
+                text: "Transforme seu planejamento em pequenas ações no dia a dia.",
               },
             ].map((step) => (
 
@@ -404,7 +406,7 @@ export default function Home() {
                   {step.title}
                 </h3>
 
-                <p className="mt-3 leading-7 text-[#929298]">
+                <p className="mt-3 leading-7 text-[#92929a]">
                   {step.text}
                 </p>
 
@@ -419,7 +421,7 @@ export default function Home() {
       </section>
 
       {/* BONUS */}
-      <section className="bg-[#111114] py-20">
+      <section className="bg-[#111113] py-20">
 
         <div className="mx-auto max-w-4xl px-5">
 
@@ -436,12 +438,12 @@ export default function Home() {
               </p>
 
               <h2 className="mt-3 text-3xl font-extrabold">
-                Planner para colocar tudo em prática
+                Planner de foco e planejamento
               </h2>
 
-              <p className="mx-auto mt-4 max-w-2xl leading-7 text-[#96969c]">
-                Páginas práticas para planejamento diário, semanal e mensal,
-                acompanhamento de hábitos e anotações.
+              <p className="mx-auto mt-4 max-w-2xl leading-7 text-[#96969d]">
+                Páginas práticas para organizar seu dia, sua semana,
+                seus hábitos, seus objetivos e suas próximas ações.
               </p>
 
             </div>
@@ -449,9 +451,9 @@ export default function Home() {
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
 
               {[
-                "Planner diário",
-                "Planner semanal",
-                "Planner mensal",
+                "Planejamento diário",
+                "Planejamento semanal",
+                "Planejamento mensal",
                 "Habit tracker",
                 "Checklists",
                 "Espaço para anotações",
@@ -459,9 +461,11 @@ export default function Home() {
 
                 <div
                   key={item}
-                  className="rounded-xl border border-white/5 bg-[#1d1d21] px-4 py-3 font-medium text-[#d0d0d4]"
+                  className="rounded-xl border border-white/5 bg-[#1d1d21] px-4 py-3 font-medium text-[#d0d0d5]"
                 >
-                  <span className="text-[#d4af37]">✓</span>{" "}
+                  <span className="text-[#d4af37]">
+                    ✓
+                  </span>{" "}
                   {item}
                 </div>
 
@@ -478,7 +482,7 @@ export default function Home() {
       {/* OFFER */}
       <section
         id="oferta"
-        className="relative overflow-hidden bg-[#0b0b0d] py-20 md:py-28"
+        className="relative overflow-hidden bg-[#09090b] py-20 md:py-28"
       >
 
         <div className="absolute left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d4af37]/10 blur-[120px]" />
@@ -490,29 +494,29 @@ export default function Home() {
             <div className="bg-[#d4af37] px-6 py-5 text-center text-black">
 
               <p className="text-sm font-extrabold uppercase tracking-[0.15em]">
-                Acesso ao material digital
+                Comece agora
               </p>
 
             </div>
 
             <div className="p-8 text-center md:p-10">
 
-              <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 text-4xl text-[#d4af37]">
+              <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 text-5xl text-[#d4af37]">
                 ✦
               </div>
 
               <h2 className="mt-6 text-3xl font-extrabold">
-                Minha Vida Organizada
+                volte ao foco.
               </h2>
 
-              <p className="mt-3 text-[#929298]">
-                Guia + páginas práticas de planejamento
+              <p className="mt-3 text-[#92929a]">
+                Guia + planner de foco e planejamento
               </p>
 
               <div className="mt-8">
 
-                <p className="text-sm text-[#77777d]">
-                  Por apenas
+                <p className="text-sm text-[#77777f]">
+                  Acesso por apenas
                 </p>
 
                 <div className="mt-1 text-5xl font-extrabold text-[#d4af37]">
@@ -525,10 +529,10 @@ export default function Home() {
                 href="https://pay.cakto.com.br/"
                 className="mt-8 block rounded-full bg-[#d4af37] px-6 py-4 font-extrabold text-black shadow-lg shadow-[#d4af37]/10 transition hover:-translate-y-1 hover:bg-[#e5c45b]"
               >
-                QUERO ORGANIZAR MINHA VIDA →
+                QUERO VOLTAR AO FOCO →
               </a>
 
-              <p className="mt-4 text-xs text-[#77777d]">
+              <p className="mt-4 text-xs text-[#77777f]">
                 Pagamento processado pela plataforma de checkout.
               </p>
 
@@ -541,7 +545,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="border-t border-white/10 bg-[#111114] py-20">
+      <section className="border-t border-white/10 bg-[#111113] py-20">
 
         <div className="mx-auto max-w-3xl px-5">
 
@@ -567,7 +571,7 @@ export default function Home() {
 
                 <div
                   key={item.question}
-                  className="overflow-hidden rounded-2xl border border-white/10 bg-[#18181c]"
+                  className="overflow-hidden rounded-2xl border border-white/10 bg-[#19191d]"
                 >
 
                   <button
@@ -590,7 +594,7 @@ export default function Home() {
 
                   {isOpen && (
 
-                    <div className="border-t border-white/10 px-5 pb-5 pt-4 leading-7 text-[#929298]">
+                    <div className="border-t border-white/10 px-5 pb-5 pt-4 leading-7 text-[#92929a]">
                       {item.answer}
                     </div>
 
@@ -609,7 +613,7 @@ export default function Home() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="border-t border-white/10 bg-[#0b0b0d] py-20">
+      <section className="border-t border-white/10 bg-[#09090b] py-20">
 
         <div className="mx-auto max-w-3xl px-5 text-center">
 
@@ -618,12 +622,14 @@ export default function Home() {
           </div>
 
           <h2 className="mt-5 text-3xl font-extrabold sm:text-4xl">
-            Sua organização começa com um primeiro passo.
+            Talvez você não precise fazer mais.
+            <br />
+            Talvez precise voltar ao foco.
           </h2>
 
-          <p className="mx-auto mt-5 max-w-xl text-lg leading-8 text-[#929298]">
-            Comece de forma simples, organize o que está ao seu alcance
-            e construa uma rotina que faça sentido para você.
+          <p className="mx-auto mt-5 max-w-xl text-lg leading-8 text-[#92929a]">
+            Organize suas prioridades, reduza as distrações e comece
+            a transformar seus objetivos em ações.
           </p>
 
           <a
@@ -638,21 +644,21 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-white/10 bg-[#080809] py-8">
+      <footer className="border-t border-white/10 bg-[#070708] py-8">
 
-        <div className="mx-auto max-w-6xl px-5 text-center text-sm text-[#66666c]">
+        <div className="mx-auto max-w-6xl px-5 text-center text-sm text-[#66666d]">
 
-          <p className="font-semibold text-[#bdbdc2]">
+          <p className="font-semibold text-[#bdbdc3]">
             <span className="text-[#d4af37]">✦</span>{" "}
-            Minha Vida Organizada
+            volte ao foco.
           </p>
 
           <p className="mt-2">
-            Material digital para organização pessoal.
+            Material digital para foco, organização e produtividade.
           </p>
 
           <p className="mt-4 text-xs">
-            © {new Date().getFullYear()} Minha Vida Organizada.
+            © {new Date().getFullYear()} volte ao foco.
             Todos os direitos reservados.
           </p>
 
