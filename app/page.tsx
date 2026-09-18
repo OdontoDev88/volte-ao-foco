@@ -85,50 +85,57 @@ export default function Home() {
     <main className="min-h-screen bg-[#09090b] text-[#f4f4f5]">
 
       {/* ================= HEADER ================= */}
+
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#09090b]/95 backdrop-blur">
         <div className="mx-auto flex h-[72px] max-w-6xl items-center justify-between px-5">
+
           <div className="text-xl font-bold tracking-tight">
             <span className="text-[#d4af37]">✦</span>{" "}
             volte ao foco.
           </div>
 
           <a
-            href="#oferta"
+            href={checkoutUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full bg-[#d4af37] px-5 py-2.5 text-sm font-bold text-black transition hover:bg-[#e5c45b]"
           >
             Quero começar
           </a>
+
         </div>
       </header>
 
       {/* ================= HERO ================= */}
-      <section className="relative min-h-[calc(100vh-72px)] overflow-hidden border-b border-white/10">
-        
-        <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d4af37]/10 blur-[140px]" />
 
-        <div className="relative mx-auto grid min-h-[calc(100vh-72px)] max-w-6xl items-center gap-8 px-5 py-8 lg:grid-cols-2 lg:gap-12">
+      <section className="relative min-h-[calc(100svh-72px)] overflow-hidden border-b border-white/10">
 
-          {/* TEXTO */}
+        <div className="absolute left-1/2 top-1/2 h-[450px] w-[450px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d4af37]/10 blur-[130px]" />
+
+        <div className="relative mx-auto grid min-h-[calc(100svh-72px)] max-w-6xl items-center gap-8 px-5 py-6 lg:grid-cols-2 lg:gap-10 lg:py-7">
+
+          {/* TEXTO PRINCIPAL */}
+
           <div className="flex flex-col justify-center">
 
-            <div className="mb-4 inline-flex w-fit rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 px-4 py-2 text-sm font-medium text-[#d4af37]">
+            <div className="mb-4 inline-flex w-fit rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 px-4 py-2 text-xs font-medium text-[#d4af37] sm:text-sm">
               ✦ Oferta especial: de R$ 24,90 por R$ 19,90
             </div>
 
-            <h1 className="max-w-2xl text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-[54px]">
+            <h1 className="max-w-2xl text-4xl font-extrabold leading-[1.04] tracking-tight sm:text-5xl lg:text-[50px]">
               Pare de se perder{" "}
               <span className="text-[#d4af37]">
                 no meio de tantas distrações.
               </span>
             </h1>
 
-            <p className="mt-5 max-w-xl text-base leading-7 text-[#a1a1aa] sm:text-lg">
+            <p className="mt-4 max-w-xl text-base leading-6 text-[#a1a1aa] sm:text-lg sm:leading-7">
               Um guia prático para organizar sua rotina, recuperar sua
               atenção, definir prioridades e voltar a agir em direção
               aos seus objetivos.
             </p>
 
-            <div className="mt-6">
+            <div className="mt-5">
               <a
                 href={checkoutUrl}
                 target="_blank"
@@ -139,84 +146,94 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-xs text-[#77777f] sm:text-sm">
+            <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-xs text-[#77777f] sm:text-sm">
               <span>✓ Acesso digital</span>
               <span>✓ Conteúdo prático</span>
               <span>✓ De R$ 24,90 por R$ 19,90</span>
             </div>
+
           </div>
 
-          {/* CAPA / MOCKUP */}
+          {/* ================= GUIA + PREÇO ================= */}
+
           <div className="flex items-center justify-center">
-            <div className="relative w-full max-w-[370px]">
 
-              <div className="absolute inset-0 translate-x-3 translate-y-3 rounded-[2rem] bg-[#d4af37]/20 blur-sm" />
+            <div className="relative w-full max-w-[350px]">
 
-              <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#151518] p-6 shadow-2xl">
+              <div className="absolute inset-0 translate-x-3 translate-y-3 rounded-[1.8rem] bg-[#d4af37]/20 blur-sm" />
+
+              <div className="relative overflow-hidden rounded-[1.8rem] border border-white/10 bg-[#151518] px-6 py-5 shadow-2xl">
+
+                {/* CAPA DO GUIA */}
 
                 <div className="text-center">
 
-                  <div className="text-4xl text-[#d4af37]">
+                  <div className="text-3xl text-[#d4af37]">
                     ✦
                   </div>
 
-                  <p className="mt-2 text-xs font-semibold uppercase tracking-[0.25em] text-[#d4af37]">
+                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.25em] text-[#d4af37]">
                     GUIA PRÁTICO
                   </p>
 
-                  <h2 className="mt-3 text-4xl font-extrabold leading-tight">
+                  <h2 className="mt-2 text-4xl font-extrabold leading-tight">
                     volte ao
                     <br />
                     foco.
                   </h2>
 
-                  <p className="mt-3 text-sm leading-6 text-[#9999a1]">
+                  <p className="mt-2 text-xs leading-5 text-[#9999a1]">
                     Organize sua mente.
                     <br />
                     Organize sua rotina.
                     <br />
                     Volte a agir.
                   </p>
+
                 </div>
 
-                <div className="mt-5 space-y-2">
+                {/* ITENS DO GUIA */}
 
-                  <div className="flex items-center gap-3 rounded-xl border border-white/5 bg-[#1f1f23] px-3 py-2.5">
-                    <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#d4af37]/15 text-xs font-bold text-[#d4af37]">
+                <div className="mt-4 space-y-2">
+
+                  <div className="flex items-center gap-2 rounded-xl border border-white/5 bg-[#1f1f23] px-3 py-2">
+                    <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#d4af37]/15 text-[10px] font-bold text-[#d4af37]">
                       1
                     </div>
 
-                    <span className="text-sm font-medium text-[#e4e4e7]">
+                    <span className="text-xs font-medium text-[#e4e4e7]">
                       Minhas prioridades
                     </span>
                   </div>
 
-                  <div className="flex items-center gap-3 rounded-xl border border-white/5 bg-[#1f1f23] px-3 py-2.5">
-                    <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#d4af37]/15 text-xs font-bold text-[#d4af37]">
+                  <div className="flex items-center gap-2 rounded-xl border border-white/5 bg-[#1f1f23] px-3 py-2">
+                    <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#d4af37]/15 text-[10px] font-bold text-[#d4af37]">
                       2
                     </div>
 
-                    <span className="text-sm font-medium text-[#e4e4e7]">
+                    <span className="text-xs font-medium text-[#e4e4e7]">
                       Minha rotina
                     </span>
                   </div>
 
-                  <div className="flex items-center gap-3 rounded-xl border border-white/5 bg-[#1f1f23] px-3 py-2.5">
-                    <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#d4af37]/15 text-xs font-bold text-[#d4af37]">
+                  <div className="flex items-center gap-2 rounded-xl border border-white/5 bg-[#1f1f23] px-3 py-2">
+                    <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#d4af37]/15 text-[10px] font-bold text-[#d4af37]">
                       3
                     </div>
 
-                    <span className="text-sm font-medium text-[#e4e4e7]">
+                    <span className="text-xs font-medium text-[#e4e4e7]">
                       Meus objetivos
                     </span>
                   </div>
 
                 </div>
 
-                <div className="mt-4 rounded-xl border border-[#d4af37]/20 bg-[#d4af37]/10 p-3 text-center">
+                {/* PREÇO */}
 
-                  <p className="text-[10px] uppercase tracking-wider text-[#d4af37]">
-                    Oferta especial
+                <div className="mt-3 rounded-xl border border-[#d4af37]/30 bg-[#d4af37]/10 px-4 py-3 text-center">
+
+                  <p className="text-[10px] font-bold uppercase tracking-wider text-[#d4af37]">
+                    OFERTA ESPECIAL
                   </p>
 
                   <p className="mt-1 text-xs text-[#9999a1]">
@@ -227,21 +244,37 @@ export default function Home() {
                     por
                   </p>
 
-                  <p className="mt-0.5 text-2xl font-extrabold text-[#d4af37]">
+                  <p className="mt-0.5 text-3xl font-extrabold text-[#d4af37]">
                     R$ 19,90
                   </p>
 
                 </div>
 
+                {/* BOTÃO DO GUIA */}
+
+                <a
+                  href={checkoutUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 block rounded-full bg-[#d4af37] px-4 py-3 text-center text-sm font-extrabold text-black transition hover:bg-[#e5c45b]"
+                >
+                  QUERO COMEÇAR →
+                </a>
+
               </div>
+
             </div>
+
           </div>
 
         </div>
+
       </section>
 
       {/* ================= PROBLEMA ================= */}
+
       <section className="bg-[#111113] py-20">
+
         <div className="mx-auto max-w-4xl px-5 text-center">
 
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#d4af37]">
@@ -268,10 +301,12 @@ export default function Home() {
               "Se sente perdido com tantas coisas para fazer",
               "Sabe onde quer chegar, mas não sabe por onde começar",
             ].map((item) => (
+
               <div
                 key={item}
                 className="rounded-2xl border border-white/10 bg-[#19191d] p-5"
               >
+
                 <span className="mr-2 text-[#d4af37]">
                   ✓
                 </span>
@@ -279,15 +314,21 @@ export default function Home() {
                 <span className="text-[#c7c7cc]">
                   {item}
                 </span>
+
               </div>
+
             ))}
 
           </div>
+
         </div>
+
       </section>
 
       {/* ================= SOLUÇÃO ================= */}
+
       <section className="bg-[#09090b] py-20">
+
         <div className="mx-auto max-w-5xl px-5 text-center">
 
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#d4af37]">
@@ -306,6 +347,7 @@ export default function Home() {
           <div className="mt-12 grid gap-5 md:grid-cols-3">
 
             {benefits.map((benefit) => (
+
               <div
                 key={benefit.title}
                 className="rounded-3xl border border-white/10 bg-[#151518] p-6 text-left shadow-lg transition hover:-translate-y-1 hover:border-[#d4af37]/30"
@@ -324,14 +366,19 @@ export default function Home() {
                 </p>
 
               </div>
+
             ))}
 
           </div>
+
         </div>
+
       </section>
 
-      {/* ================= INCLUÍDO ================= */}
+      {/* ================= O QUE ESTÁ INCLUÍDO ================= */}
+
       <section className="border-y border-white/10 bg-[#111113] py-20">
+
         <div className="mx-auto max-w-5xl px-5">
 
           <div className="text-center">
@@ -349,6 +396,7 @@ export default function Home() {
           <div className="mx-auto mt-10 grid max-w-3xl gap-3 sm:grid-cols-2">
 
             {included.map((item) => (
+
               <div
                 key={item}
                 className="flex items-center gap-3 rounded-2xl border border-white/10 bg-[#19191d] p-4"
@@ -363,14 +411,19 @@ export default function Home() {
                 </span>
 
               </div>
+
             ))}
 
           </div>
+
         </div>
+
       </section>
 
       {/* ================= COMO FUNCIONA ================= */}
+
       <section className="bg-[#09090b] py-20">
+
         <div className="mx-auto max-w-5xl px-5 text-center">
 
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#d4af37]">
@@ -400,6 +453,7 @@ export default function Home() {
                 text: "Transforme seu planejamento em pequenas ações no dia a dia.",
               },
             ].map((step) => (
+
               <div key={step.number}>
 
                 <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#d4af37] text-lg font-extrabold text-black">
@@ -415,14 +469,19 @@ export default function Home() {
                 </p>
 
               </div>
+
             ))}
 
           </div>
+
         </div>
+
       </section>
 
       {/* ================= BÔNUS ================= */}
+
       <section className="bg-[#111113] py-20">
+
         <div className="mx-auto max-w-4xl px-5">
 
           <div className="rounded-[2rem] border border-[#d4af37]/20 bg-[#151518] p-8 shadow-xl md:p-12">
@@ -458,23 +517,32 @@ export default function Home() {
                 "Checklists",
                 "Espaço para anotações",
               ].map((item) => (
+
                 <div
                   key={item}
                   className="rounded-xl border border-white/5 bg-[#1d1d21] px-4 py-3 font-medium text-[#d0d0d5]"
                 >
+
                   <span className="text-[#d4af37]">
                     ✓
                   </span>{" "}
+
                   {item}
+
                 </div>
+
               ))}
 
             </div>
+
           </div>
+
         </div>
+
       </section>
 
       {/* ================= OFERTA ================= */}
+
       <section
         id="oferta"
         className="relative overflow-hidden bg-[#09090b] py-20 md:py-28"
@@ -545,12 +613,17 @@ export default function Home() {
               </p>
 
             </div>
+
           </div>
+
         </div>
+
       </section>
 
       {/* ================= FAQ ================= */}
+
       <section className="border-t border-white/10 bg-[#111113] py-20">
+
         <div className="mx-auto max-w-3xl px-5">
 
           <div className="text-center">
@@ -572,6 +645,7 @@ export default function Home() {
               const isOpen = openFaq === index;
 
               return (
+
                 <div
                   key={item.question}
                   className="overflow-hidden rounded-2xl border border-white/10 bg-[#19191d]"
@@ -596,21 +670,29 @@ export default function Home() {
                   </button>
 
                   {isOpen && (
+
                     <div className="border-t border-white/10 px-5 pb-5 pt-4 leading-7 text-[#92929a]">
                       {item.answer}
                     </div>
+
                   )}
 
                 </div>
+
               );
+
             })}
 
           </div>
+
         </div>
+
       </section>
 
       {/* ================= CTA FINAL ================= */}
+
       <section className="border-t border-white/10 bg-[#09090b] py-20">
+
         <div className="mx-auto max-w-3xl px-5 text-center">
 
           <div className="text-4xl text-[#d4af37]">
@@ -649,10 +731,13 @@ export default function Home() {
           </p>
 
         </div>
+
       </section>
 
       {/* ================= FOOTER ================= */}
+
       <footer className="border-t border-white/10 bg-[#070708] py-8">
+
         <div className="mx-auto max-w-6xl px-5 text-center text-sm text-[#66666d]">
 
           <p className="font-semibold text-[#bdbdc3]">
@@ -670,6 +755,7 @@ export default function Home() {
           </p>
 
         </div>
+
       </footer>
 
     </main>
