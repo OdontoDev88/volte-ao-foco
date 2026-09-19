@@ -250,17 +250,6 @@ export default function Home() {
 
                 </div>
 
-                {/* BOTÃO DO GUIA */}
-
-                <a
-                  href={checkoutUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-3 block rounded-full bg-[#d4af37] px-4 py-3 text-center text-sm font-extrabold text-black transition hover:bg-[#e5c45b]"
-                >
-                  QUERO COMEÇAR →
-                </a>
-
               </div>
 
             </div>
